@@ -51,5 +51,16 @@
  - A block is a set of JS statements between a pair of curly braces
  ```javascript
  if (iLovePie) {
-   eatPie();
+   eatPie(); // This space between the braces is the block. eatPie function lives here currently
+}
  ```
+**NOTE: Not all statements between curly braces are technically blocks i.e function body, object literal etc.**
+```javascript
+function foo() {
+  console.log('foo'); // This technically has function scope, not block scope. They act very similar however
+}
+
+let bar = {
+  foo: 'bar'; // This is not a block  
+}
+```

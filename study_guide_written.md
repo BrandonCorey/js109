@@ -43,7 +43,7 @@
  ```
  **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**
  
- ##Variable Scope##
+ ## Variable Scope ##
  - A variable's scope determines where it is available in a program
  - Depends on the scope in which the variable is declared
  **let and const**

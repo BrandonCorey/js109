@@ -49,6 +49,7 @@
  **let and const**
  - Have block scopes
  - A block is a set of JS statements between a pair of curly braces
+ - Generally seen in if...else, while, do...while, for, switch, and try...catch statements
  ```javascript
  if (iLovePie) {
    eatPie(); // This space between the braces is the block. eatPie function lives here currently
@@ -63,4 +64,11 @@ function foo() {
 let bar = {
   foo: 'bar'; // This is not a block  
 }
+```
+- Variables with block scope cannot be accessed outside of their scope
+```javascript
+if (something === true) {
+  let answer = 'this is true';
+}
+console.log(answer) // This will throw a reference error
 ```

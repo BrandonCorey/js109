@@ -78,5 +78,7 @@ let a = 0;
 if (1 === 1) {
   a = 5;
 }
-console.log(a); // This print 5 as 'a' is declared within the same scope as the log statment. 'a' is accessible within the block of the if statement as it was declared in an outer scope. 'a' is then reassigned since the condition evaluates to true, then printed.
+console.log(a); // This print 5 as 'a' is declared within the same scope as the log statment. 
+// 'a' is accessible within the block of the if statement as it was declared in an outer scope. 
+// 'a' is then reassigned since the condition evaluates to true, then printed.
 ```

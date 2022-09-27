@@ -46,8 +46,8 @@
  ## Variable Scope ##
  - A variable's scope determines where it is available in a program
  - Depends on the scope in which the variable is declared
- **let and const**
- - Have block scopes
+ **Block scope**
+ - Variables declared with let and const have block scope
  - A block is a set of JS statements between a pair of curly braces
  - Generally seen in if...else, while, do...while, for, switch, and try...catch statements
  ```javascript
@@ -78,7 +78,30 @@ let a = 0;
 if (1 === 1) {
   a = 5;
 }
-console.log(a); // This print 5 as 'a' is declared within the same scope as the log statment. 
+console.log(a); 
+// This print 5 as 'a' is declared within the same scope as the log statment. 
 // 'a' is accessible within the block of the if statement as it was declared in an outer scope. 
 // 'a' is then reassigned since the condition evaluates to true, then printed.
+```
+**Global Scope**
+- The outermost scope of a program
+- Variable declared here are called *Global Variables*
+- Global Variables are accessible throughout the entire program (below where they are declared)
+
+**Local Scope
+- The scope of a function or block
+- Variables declared here are called *Local Variables*
+- Local variables are not accessible to the outer scope
+```javascript
+let globalVar = 5
+function changeVar() {
+  console.log(globalVar); // Doesn't need to take argument since global var is accessible within the local scope of the function
+}
+changeVar(); // Prints 5
+
+function changeVarLocal() {
+  let num = 5;
+  console.log(num);
+}
+changeVarLocal(); // Prints 5 as well, but doesn't use any global variables 
 ```

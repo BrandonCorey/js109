@@ -19,14 +19,22 @@
   - Variables can be initalized with a value or without
 
  ```javascript
-  let variable; // This is a variable declaration initalized to a value of undefined
-  let variable = 1; // This is a variable declaration initalized with a value of 1;
+  let num; // This is a variable declaration initalized to a value of undefined
+  let number = 1; // This is a variable declaration initalized with a value of 1;
   const constant = 1; // This is a constant declaration initalized to a value of 1
   ```
   
   **NOTE: INITALIZATIONS AND DECLARATIONS**
    - Variable declarations always return a value of undefined, regardless of whether or not they are provided an initial value (initializer)
   ```javascript
-  let variable; // Returns undefined
-  let newVariable = 5; // Returns defined
+  let num; // Returns undefined
+  let number = 5; // Returns UNdefined
  ```
+**Assignment**
+ - A value that is supplied to a variable after the initialilzation
+ ```javascript
+ let num; // variable declaration
+ let number = 5; // variable delcaration with an initializer of 5
+ number = 5; // Assignment of the value 5 to variable "number" 
+ ```
+ **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**

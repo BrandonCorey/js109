@@ -42,3 +42,14 @@
  number = 3 // Reassignment of the value 3 to the variable "number"
  ```
  **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**
+ 
+ ##Variable Scope##
+ - A variable's scope determines where it is available in a program
+ - Depends on the scope in which the variable is declared
+ **let and const**
+ - Have block scopes
+ - A block is a set of JS statements between a pair of curly braces
+ ```javascript
+ if (iLovePie) {
+   eatPie();
+ ```

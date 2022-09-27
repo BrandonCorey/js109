@@ -31,7 +31,10 @@
   let number = 5; // Returns UNdefined
  ```
 **Assignment**
- - A value that is supplied to a variable after the initialilzation
+- A value that is supplied to a variable after the initialilzation
+
+**Reassignment**
+- A variable assignment that takes place on a variable that has been initalized with or assigned a value previously.
  ```javascript
  let num; // variable declaration
  let number = 5; // variable delcaration with an initializer of 5

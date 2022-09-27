@@ -70,5 +70,5 @@ let bar = {
 if (something === true) {
   let answer = 'this is true';
 }
-console.log(answer) // This will throw a reference error
+console.log(answer) // This will throw a reference error as answer is not visible to the outer scope that console.log(answer) is in
 ```

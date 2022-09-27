@@ -14,7 +14,7 @@
   ```
 
 **Initialization**
- - *The assignment of a value to a variable declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined*
+- *The assignment of a value to a variable declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined*
   - As mentioned above, constants must be initalized with a value at declaration
   - Variables can be initalized with a value or without
 

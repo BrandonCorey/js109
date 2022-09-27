@@ -36,5 +36,6 @@
  let num; // variable declaration
  let number = 5; // variable delcaration with an initializer of 5
  number = 5; // Assignment of the value 5 to variable "number" 
+ number = 3 // Reassignment of the value 3 to the variable "number"
  ```
  **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**

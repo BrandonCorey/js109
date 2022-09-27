@@ -14,7 +14,7 @@
   ```
 
 **Initialization**
-- Initalization is the storing of a value inside a variable at declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined
+- Initalization is the storing of a value inside of a variable at declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined
   - As mentioned above, constants must be initalized with a value at declaration
   - Variables can be initalized with a value or without
 
@@ -23,3 +23,10 @@
   let variable = 1; // This is a variable declaration initalized with a value of 1;
   const constant = 1; // This is a constant declaration initalized to a value of 1
   ```
+  
+  **Note**
+   - Variable declarations always return a value of undefined, regardless of whether or not they are provided an initial value (initializer)
+  ```javascript
+  let variable; // Returns undefined
+  let newVariable = 5; // Returns defined
+ ```

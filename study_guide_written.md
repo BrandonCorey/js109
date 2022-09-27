@@ -88,7 +88,7 @@ console.log(a);
 - Variable declared here are called *Global Variables*
 - Global Variables are accessible throughout the entire program (below where they are declared)
 
-**Local Scope
+**Local Scope**
 - The scope of a function or block
 - Variables declared here are called *Local Variables*
 - Local variables are not accessible to the outer scope

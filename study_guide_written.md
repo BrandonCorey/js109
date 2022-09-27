@@ -4,5 +4,12 @@
 
 **Declarations**
 - *A variable declaration is a statement that asks the JavaScript egnine to reserve space for a variable (that has a particular name)*
-- Declarations are made with the let and const keywords
-- "let" is used for variables, "const" for constants
+  - Declarations are made with the let and const keywords
+  - "let" is used for variables, "const" for constants
+  ```javascript
+  let variable;
+  const constant = 1;
+  ```
+
+**Initialization**
+ - *The assignment of a value to a variable declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined*

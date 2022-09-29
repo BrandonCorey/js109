@@ -1,3 +1,5 @@
+# Study Guide for JS109 #
+
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**
 - A named area of a program's memory where data can be stored

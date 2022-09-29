@@ -14,9 +14,10 @@
   let variable;
   const constant = 1;
   ```
-**NOTE: Variables for 109 exam**: variables declared with let or const
-                                  function parameters
-                                  function names
+**NOTE: Variables for 109 exam**: 
+- variables declared with let or const
+- function parameters
+- function names
 **NOTE: Object Properties are NOT variables**                                 
                                 
 **Initialization**

@@ -1,4 +1,4 @@
-# Study Guide for JS109 #
+# Study Guide: JS109 #
 
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**
@@ -106,4 +106,26 @@ function changeVarLocal() {
   console.log(num);
 }
 changeVarLocal(); // Prints 5 as well, but doesn't use any global variables 
+```
+
+**Primitive Data Types**
+- String
+- Number
+- Bool
+- Undefined
+- Null
+
+**Object Data Types**
+- Simple Object
+- Array
+
+*These data types can be represented as literals*
+- A literal is any notation that lets you represent a fixed value in source code
+```javascript
+'I am the man'             // string literal
+12345                      // numeric literal
+{name: 'Brandon', age: 23} // object literal
+true                       // boolean literal
+[1, 2, 3]                  // array literal
+undefined                  // undefined literal
 ```

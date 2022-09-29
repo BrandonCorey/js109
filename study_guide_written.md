@@ -107,13 +107,14 @@ function changeVarLocal() {
 }
 changeVarLocal(); // Prints 5 as well, but doesn't use any global variables 
 ```
+# Primitive alues, objects, and type coercions #
 
 **Primitive Data Types**
-- String
-- Number
-- Bool
-- Undefined
-- Null
+- String --> list of characters in sequence (typically used to represent text)
+- Number --> represents all types of numbers in javaScript (int, float, fixed)
+- Bool --> represents an "on" or "off" state, can also be used for evaluation of logical "true" or "false"
+- Undefined --> represents the absence of a value. Can be implicit or used in a literal.
+- Null --> same as undefined, but MUST be used as a literal. Cannot be implicitly returned.
 
 **Object Data Types**
 - Simple Object
@@ -129,3 +130,5 @@ true                       // boolean literal
 [1, 2, 3]                  // array literal
 undefined                  // undefined literal
 ```
+
+

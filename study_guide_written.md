@@ -14,7 +14,11 @@
   let variable;
   const constant = 1;
   ```
-
+**NOTE: Variables for 109 exam**: variables declared with let or const
+                                  function parameters
+                                  function names
+**NOTE: Object Properties are NOT variables**                                 
+                                
 **Initialization**
 - Initalization is the storing of a value inside of a variable at declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined
   - As mentioned above, constants must be initalized with a value at declaration

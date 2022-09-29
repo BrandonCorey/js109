@@ -107,7 +107,7 @@ function changeVarLocal() {
 }
 changeVarLocal(); // Prints 5 as well, but doesn't use any global variables 
 ```
-# Primitive alues, objects, and type coercions #
+## Primitive alues, objects, and type coercions ##
 
 **Primitive Data Types**
 - String --> list of characters in sequence (typically used to represent text)

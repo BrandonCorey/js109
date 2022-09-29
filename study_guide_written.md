@@ -158,7 +158,7 @@ true * 5; // true is coerced to number 1 and then multiplied by 5 --> 5
 if ('randomtruthy') console.log('hello'); // All values are coerced to boolean within conditional statements based on truthiness of the value
 ```
 
-# Object Properties #
+## Object Properties ##
 - An object property is a named key that can be used to access an associated value
 - An onjects properties are always strings or symbols, but the values can be any type
 - Despite the fact that keys are strings, they do not need quotations, the JS engine knows what you mean.

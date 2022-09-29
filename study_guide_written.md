@@ -115,10 +115,12 @@ changeVarLocal(); // Prints 5 as well, but doesn't use any global variables
 - Bool --> represents an "on" or "off" state, can also be used for evaluation of logical "true" or "false"
 - Undefined --> represents the absence of a value. Can be implicit or used in a literal.
 - Null --> same as undefined, but MUST be used as a literal. Cannot be implicitly returned.
+- BigInt --> represents larger numbers than Number
+- Symbol --> Don't know what this does
 
 **Object Data Types**
-- Simple Object
-- Array
+- Simple Object --> A collection of key value pairs
+- Array --> an ordered list of data types (do not have to be same data type)
 
 *These data types can be represented as literals*
 - A literal is any notation that lets you represent a fixed value in source code
@@ -131,4 +133,19 @@ true                       // boolean literal
 undefined                  // undefined literal
 ```
 
-
+**Explicit Coercion**
+- When the programmer intentionally changes one data type to another
+- This can be done using functions
+```javascript
+Number('69') // Coerces the string '69' to the number 69
+Number('peanutbutter') // Coerces string 'peanutbutter' to number NaN
+String(20) // Coerces number 20 to string '20'
+```
+**Implicit Coercion**
+- When the JavaScript engine coerces one data type to another
+```javascript
+10 + 'peanutbutter' // Coerces number 10 to string '10' and then concatenates with peanutbutter --> '10peanutbutter'
+true * 5 // true is coerced to number 1 and then multiplied by 5 --> 5
+'123' == 123 // '123' is coerced to 123 number due to loose equality operator
+if ('randomtruthy') console.log('hello') // All values are coerced to boolean within conditional statements based on truthiness of the value
+```

@@ -18,6 +18,7 @@
 - variables declared with let or const
 - function parameters
 - function names
+
 **NOTE: Object Properties are NOT variables**                                 
                                 
 **Initialization**
@@ -46,7 +47,7 @@
  let num; // variable declaration
  let number = 5; // variable delcaration with an initializer of 5
  number = 5; // Assignment of the value 5 to variable "number" 
- number = 3 // Reassignment of the value 3 to the variable "number"
+ number = 3; // Reassignment of the value 3 to the variable "number"
  ```
  **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**
  
@@ -126,6 +127,8 @@ changeVarLocal(); // Prints 5 as well, but doesn't use any global variables
 **Object Data Types**
 - Simple Object --> A collection of key value pairs
 - Array --> an ordered list of data types (do not have to be same data type)
+- Functions --> A named, extracted unit of code that can be executed repeatedly throughout a program
+- Dates
 
 *These data types can be represented as literals*
 - A literal is any notation that lets you represent a fixed value in source code
@@ -142,15 +145,30 @@ undefined                  // undefined literal
 - When the programmer intentionally changes one data type to another
 - This can be done using functions
 ```javascript
-Number('69') // Coerces the string '69' to the number 69
-Number('peanutbutter') // Coerces string 'peanutbutter' to number NaN
-String(20) // Coerces number 20 to string '20'
+Number('69'); // Coerces the string '69' to the number 69
+Number('peanutbutter'); // Coerces string 'peanutbutter' to number NaN
+String(20); // Coerces number 20 to string '20'
 ```
 **Implicit Coercion**
 - When the JavaScript engine coerces one data type to another
 ```javascript
-10 + 'peanutbutter' // Coerces number 10 to string '10' and then concatenates with peanutbutter --> '10peanutbutter'
-true * 5 // true is coerced to number 1 and then multiplied by 5 --> 5
-'123' == 123 // '123' is coerced to 123 number due to loose equality operator
-if ('randomtruthy') console.log('hello') // All values are coerced to boolean within conditional statements based on truthiness of the value
+10 + 'peanutbutter'; // Coerces number 10 to string '10' and then concatenates with peanutbutter --> '10peanutbutter'
+true * 5; // true is coerced to number 1 and then multiplied by 5 --> 5
+'123' == 123; // '123' is coerced to 123 number due to loose equality operator
+if ('randomtruthy') console.log('hello'); // All values are coerced to boolean within conditional statements based on truthiness of the value
 ```
+
+# Object Properties #
+- An object property is a named key that can be used to access an associated value
+- An onjects properties are always strings or symbols, but the values can be any type
+- Despite the fact that keys are strings, they do not need quotations, the JS engine knows what you mean.
+*Accessing Properties*
+- Can be done two ways
+```javascript
+person.name;
+person['age'];
+```
+- If using a variable as the key name, it MUST be done with a bracket opposed to a dot
+```javascript
+let name = 'Brandon';
+person[name];

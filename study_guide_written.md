@@ -66,7 +66,7 @@
 **NOTE: Not all statements between curly braces are technically blocks i.e function body, object literal etc.**
 ```javascript
 function foo() {
-  console.log('foo'); // This technically has function scope, not block scope. They act very similar however
+  console.log('foo'); // This is a function body. It technically has function scope, not block scope. They act very similar however.
 }
 
 let bar = {

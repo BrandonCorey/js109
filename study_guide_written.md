@@ -226,8 +226,18 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
   - Parameters are _local variables_
   - The arguments passed into the function become the values of the parameters when it is called
 
+```javascript
+function add(a, b) { // This part is the definition with the parameters
+  return a + b
+}
+
+add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
+```
+
 **Return values**
 - Returns a result to the call location of the function
 - Functions have implicit or explicit return values. Implicit value is undefined by default
 - The `return` key word creates a return statement that can be used to explicity return a value from a function
   - Functions that always return a boolean value are called _Predicates_
+
+## Working with strings ##

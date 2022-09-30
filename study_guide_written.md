@@ -219,3 +219,15 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 '1' == true // true ('1' is coerced to 1, true is coerced to 1, then strictly compared)
 '1' == 'true' //false (Neither value is coerced as they are same type. So '1' and 'true' are stictly compared)
 ```
+
+## Passing arguments into and return values out of functions ##
+**Arguments** - Values that are passed into a function when the function is called
+**Parameters** - The names defined within the parenthesis of the function definition
+  - Parameters are _local variables_
+  - The arguments passed into the function become the values of the parameters when it is called
+
+**Return values**
+- Returns a result to the call location of the function
+- Functions have implicit or explicit return values. Implicit value is undefined by default
+- The `return` key word creates a return statement that can be used to explicity return a value from a function
+  - Functions that always return a boolean value are called _Predicates_

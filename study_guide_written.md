@@ -204,7 +204,8 @@ console.log(arr) // [ 'banana', 2, 3 ];
 arr = 'brandon'; // TypeError: reassignment to a constant variable
 ```
 ## Loose and Strict equality ##
-**Strict Equality Operator**: === 
+**Strict Equality Operator**: ===
+
 *Returns true when two operands have the same type *and* value*
 ```javascript
 1 === 1; // true
@@ -212,7 +213,8 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 'abc' == 'aBc' // false
 1 === true // false
 ```
-**Loose Equality Operator**: == 
+**Loose Equality Operator**: ==
+
 *When operands have differnt types, will coerce one or both operands to the same type before comparing*
  - Booleans and strings are always coerced to numbers if compared to a number using loose equality
 ```javascript

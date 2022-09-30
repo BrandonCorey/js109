@@ -176,6 +176,7 @@ person[name];
 
 ## Mutability vs Immutability vs const. ##
 **Mutable** --> Able to add, remove, or change various component values of an object (only objects, primitives are NOT mutable)
+
 **Immutable** --> Unable to add, remove, or change components of data type (primitive OR object)
   - Primitives always immutable
   - Can only be reassigned or given an entirely new value

@@ -175,12 +175,12 @@ person[name];
 ```
 
 ## Mutability vs Immutability vs const. ##
-**Mutable** --> Able to add, remove, or change various component values of an object (only objects, primitives are NOT mutable)
+**Mutable** --> Able to add, remove, or change various component values of an object (only objects)
 
 **Immutable** --> Unable to add, remove, or change components of data type (primitive OR object)
-  - Primitives always immutable
-  - Can only be reassigned or given an entirely new value
-  - All operations on primitive values evaluate as new values, even if the resulting value is the same (0 + 0)
+  - Primitives are always immutable
+    - Can only be reassigned or given an entirely new value
+    - All operations performed on primitive values evaluate as new values, even if the resulting value is the same (0 + 0)
 
 ```javascript
 let x = 5;
@@ -191,7 +191,7 @@ let obj = {a: 1, b: 2}
 obj.c = 3;
 console.log(obj) // {a: 1, b: 2, c: 3}
 ```
-**const** --> const variables are NOT allowed to be reassigned, they ARE allowed to be mutates
+**const** --> const variables are NOT allowed to be reassigned, they ARE allowed to be mutated
 ```javascript
 const x = 5;
 x = 3; // TypeError: reassignment to constant variable
@@ -203,3 +203,4 @@ console.log(arr) // [ 'banana', 2, 3 ];
 
 arr = 'brandon'; // TypeError: reassignment to a constant variable
 ```
+## Loose and Strict equality ##

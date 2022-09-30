@@ -172,3 +172,20 @@ person['age'];
 ```javascript
 let name = 'Brandon';
 person[name];
+```
+
+## Mutability vs Immutability vs const. ##
+- Mutable --> Able to add, remove, or change various component values of an object (only objects, primitives are NOT mutable)
+- Immutable --> Unable to add, remove, or change components of data type (primitive OR object)
+  - Primitives always immutable
+  - Can only be reassigned or given an entirely new value
+  - All operations on primitive values evaluate as new values, even if the resulting value is the same (0 + 0)
+```javascript
+let x = 5;
+let y = x + 1;
+console.log(x); // 5
+
+let obj = {a: 1, b: 2}
+obj.c = 3;
+console.log(obj) // {a: 1, b: 2, c: 3}
+```

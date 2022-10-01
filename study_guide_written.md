@@ -232,7 +232,7 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 **Arguments** - Values that are passed into a function when the function is called
 **Parameters** - The names defined within the parenthesis of the function definition
   - Parameters are _local variables_
-  - The arguments passed into the function become the values of the parameters when it is called
+  - The arguments passed into the function become the values of the parameters when the function is called
 
 ```javascript
 function add(a, b) { // This part is the definition with the parameters
@@ -292,6 +292,19 @@ let string = 'I went to the store';
 string.split(); // [ 'I went to the store' ];
 string.split(''); // [ 'I', ' ', 'w', 'e', 'n', 't', ' ', 't', 'o', ' ', 't', 'h', 'e', ' ', 's', 't', 'o', 'r', 'e' ]
 string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
+```
+
+**String.prototype.trim**
+- Removes whitespace from both ends of the string that it is called on
+- Useful when getting input from the user
+```javascript
+'    brandon corey    '.trim(); // brandon corey
+'\tbrandon corey\n'.trim(); // brandon corey (NOTE: These are both whitespace characets. Tab and new line respectively
+```
+-There are variations of the ```trim``` method. ```trimStart``` removes whitespace from start of string, ```trimEnd``` removes white space from end of string
+```javascript
+'   once upon a time'.trimStart() // 'once upon a time'
+'once upon a time'.trimEnd() // 'once upon a time'
 ```
 
 ## Working with arrays ##

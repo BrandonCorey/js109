@@ -9,11 +9,11 @@
   - Declarations are made with the let and const keywords
   - "let" is used for variables, "const" for constants
   - Notice that an initalizer must be specified for constant declarations, but not for variable declarations
-
   ```javascript
   let variable;
   const constant = 1;
   ```
+
 **NOTE: Variables for 109 exam**: 
 - variables declared with let or const
 - function parameters
@@ -25,7 +25,6 @@
 - Initalization is the storing of a value inside of a variable at declaration. If an initalizer is not specified at time of declaration, variable is initalized to value of undefined
   - As mentioned above, constants must be initalized with a value at declaration
   - Variables can be initalized with a value or without
-
  ```javascript
   let num; // This is a variable declaration initalized to a value of undefined
   let number = 1; // This is a variable declaration initalized with a value of 1;
@@ -38,6 +37,7 @@
   let num; // Returns undefined
   let number = 5; // Returns UNdefined
  ```
+ 
 **Assignment**
 - A value that is supplied to a variable after the initialilzation
 
@@ -49,6 +49,7 @@
  number = 5; // Assignment of the value 5 to variable "number" 
  number = 3; // Reassignment of the value 3 to the variable "number"
  ```
+ 
  **NOTE: When using '=' in the context of a vriable assignment, it is called an assignment operator**
  
  ## Variable Scope ##
@@ -63,6 +64,7 @@
    eatPie(); // This space between the braces is the block. eatPie function lives here currently
 }
  ```
+ 
 **NOTE: Not all statements between curly braces are technically blocks i.e function body, object literal etc.**
 ```javascript
 function foo() {
@@ -80,6 +82,7 @@ if (something === true) {
 }
 console.log(answer) // This will throw a reference error as answer is not visible to the outer scope that console.log(answer) is in
 ```
+
 - An example where answer would be accessible
 ```javascript
 let a = 0;
@@ -91,6 +94,7 @@ console.log(a);
 // 'a' is accessible within the block of the if statement as it was declared in an outer scope. 
 // 'a' is then reassigned since the condition evaluates to true, then printed.
 ```
+
 **Global Scope**
 - The outermost scope of a program
 - Variable declared here are called *Global Variables*
@@ -113,6 +117,7 @@ function changeVarLocal() {
 }
 changeVarLocal(); // Prints 5 as well, but doesn't use any global variables 
 ```
+
 ## Primitive alues, objects, and type coercions ##
 
 **Primitive Data Types**
@@ -149,6 +154,7 @@ Number('69'); // Coerces the string '69' to the number 69
 Number('peanutbutter'); // Coerces string 'peanutbutter' to number NaN
 String(20); // Coerces number 20 to string '20'
 ```
+
 **Implicit Coercion**
 - When the JavaScript engine coerces one data type to another
 ```javascript
@@ -203,6 +209,7 @@ console.log(arr) // [ 'banana', 2, 3 ];
 
 arr = 'brandon'; // TypeError: reassignment to a constant variable
 ```
+
 ## Loose and Strict equality ##
 **Strict Equality Operator**: === *Returns true when two operands have the same type *and* value*
 ```javascript
@@ -211,6 +218,7 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 'abc' == 'aBc' // false
 1 === true // false
 ```
+
 **Loose Equality Operator**: == *When operands have differnt types, will coerce one or both operands to the same type before comparing*
  - Booleans and strings are always coerced to numbers if compared to a number using loose equality
 ```javascript
@@ -260,14 +268,14 @@ str.slice(-2) // 'on'
 _NOTE: Because strings are primitive values, any operation on them will return a new string_
 
 **String.prototype.concat**
-- The ```concat``` method concatenates the string arguments to the calling string and _returns_ a new string.
+- The ```concat``` method concatenates the string arguments to the calling string and **_returns_** a new string.
 ```javascript 
 'hello '.concat('world') // 'hello world'
 ```
 
 **String.prototype.includes**
-- Takes a string as an argument and _returns_ a boolean signifying whether that string exists within the string that ```includes``` was called on.
-- Has optiona second argument for index to start searching at
+- Takes a string as an argument and **_returns_** a boolean signifying whether that string exists within the string that ```includes``` was called on.
+- Has optional second argument for index to start searching at
 ```javascript
 let sentence = `qwerty`
 sentence.includes('w') // true
@@ -276,7 +284,15 @@ sentence.includes('z') // false
 ```
 
 **String.prototype.split**
-- Seperates a given string into multiple strings and _returns_ them in the form of an array
+- Seperates a given string into multiple strings and **_returns_** them in the form of an array
+- Has optional argument that determines the seperator character for the split
+  - No argument specification returns the entire string as an array. Empty string argument returns split on each character.
+```javascript
+let string = 'I went to the store';
+string.split(); // [ 'I went to the store' ];
+string.split(''); // [ 'I', ' ', 'w', 'e', 'n', 't', ' ', 't', 'o', ' ', 't', 'h', 'e', ' ', 's', 't', 'o', 'r', 'e' ]
+string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
+```
 
 ## Working with arrays ##
 _Arrays are zero-indexed ordered collections_
@@ -290,6 +306,7 @@ arr[0] // 'these'
 arr.slice() // [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'sentence' ] (NOTE: THIS IS A COPY)
 arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 ```
+
 ## Object Element Reference ##
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
 

@@ -267,4 +267,16 @@ arr[0] // 'these'
 arr.slice() // [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'sentence' ] (NOTE: THIS IS A COPY)
 arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 ```
+## Object Element Reference ##
+_Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
+
+**Object Element Reference**
+ - Can use bracket notation or dot notation
+ - key/property names in an object must be unique
+ - Object.keys(obj) method and Object.values(obj) method can be used to reference their respective components (keys, values)
+```javascript
+let name = { last: ever, first: greatest } // like a sprained ankle boy aint nothing to play with
+name.last = 'Corey';
+name['first'] = 'Brandon';
+name.last[0] // Returns 'C' since last is now 'Corey';
 ```

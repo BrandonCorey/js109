@@ -323,7 +323,7 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 - Convert the strings to uppercase or lowercase characters respectively and _**returns**_ new string.
 ```javascript
 'Brandon'.toUpperCase(); // 'BRANDON'
-'Brandon.toLowerCase(); // 'brandon'
+'Brandon'.toLowerCase(); // 'brandon'
 ```
 
 **String.prototype.charAt**

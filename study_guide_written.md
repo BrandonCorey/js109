@@ -248,7 +248,7 @@ add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
 - The `return` key word creates a return statement that can be used to explicity return a value from a function
   - Functions that always return a boolean value are called _Predicates_
 
-### Method types ###
+## Method types ##
 - Prototype method
   - Can be called directly on corresponding data type
 - Static method

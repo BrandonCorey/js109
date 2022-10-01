@@ -193,9 +193,9 @@ let x = 5;
 let y = x + 1;
 console.log(x); // 5
 
-let obj = {a: 1, b: 2}
+let obj = { a: 1, b: 2 };
 obj.c = 3;
-console.log(obj) // {a: 1, b: 2, c: 3}
+console.log(obj); // { a: 1, b: 2, c: 3 }
 ```
 **const** --> const variables are NOT allowed to be reassigned, they ARE allowed to be mutated
 ```javascript
@@ -203,9 +203,9 @@ const x = 5;
 x = 3; // TypeError: reassignment to constant variable
 
 const arr = [ 1, 2, 3 ];
-arr[0] = `ba${0/0}na`.toLowerCase();
+arr[0]; = `ba${0/0}na`.toLowerCase();
 
-console.log(arr) // [ 'banana', 2, 3 ];
+console.log(arr); // [ 'banana', 2, 3 ];
 
 arr = 'brandon'; // TypeError: reassignment to a constant variable
 ```
@@ -214,18 +214,18 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 **Strict Equality Operator**: === *Returns true when two operands have the same type *and* value*
 ```javascript
 1 === 1; // true
-1 === '1' //false
-'abc' == 'aBc' // false
-1 === true // false
+1 === '1'; //false
+'abc' == 'aBc'; // false
+1 === true; // false
 ```
 
 **Loose Equality Operator**: == *When operands have differnt types, will coerce one or both operands to the same type before comparing*
  - Booleans and strings are always coerced to numbers if compared to a number using loose equality
 ```javascript
-1 == '1' // true ('1' is coerced to 1, then strictly compared)
-1 == true // true (true is coerced to 1, then strictly compared)
-'1' == true // true ('1' is coerced to 1, true is coerced to 1, then strictly compared)
-'1' == 'true' //false (Neither value is coerced as they are same type. So '1' and 'true' are stictly compared)
+1 == '1'; // true ('1' is coerced to 1, then strictly compared)
+1 == true; // true (true is coerced to 1, then strictly compared)
+'1' == true; // true ('1' is coerced to 1, true is coerced to 1, then strictly compared)
+'1' == 'true'; //false (Neither value is coerced as they are same type. So '1' and 'true' are stictly compared)
 ```
 
 ## Passing arguments into and return values out of functions ##
@@ -236,10 +236,10 @@ arr = 'brandon'; // TypeError: reassignment to a constant variable
 
 ```javascript
 function add(a, b) { // This part is the definition with the parameters
-  return a + b
+  return a + b;
 }
 
-add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
+add(5, 4); // 9 is the value returned, 5 and 4 are the arugments
 ```
 
 **Return values**
@@ -255,9 +255,9 @@ add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
   - Can ony be called on the constuctor for the data type
 ```javascript
 // Prototype Method
-'abc'.charCodeAt(0) // 97
+'abc'.charCodeAt(0); // 97
 // Static method
-String.fromCharCode(97) // 'a'
+String.fromCharCode(97); // 'a'
 ```
 
 ## Working with strings ##
@@ -268,11 +268,11 @@ _Strings are zero-indexed ordered collections_
  - Can also use a method like String.prototype.slice or substring
 ```javascript
 let str = 'brandon';
-str[0] // 'b'
-str.slice(2, 4) // 'an'
-str.substring(2, 4) //'an'
-str.substring(-2) // 'brandon'
-str.slice(-2) // 'on'
+str[0]; // 'b'
+str.slice(2, 4); // 'an'
+str.substring(2, 4); //'an'
+str.substring(-2); // 'brandon'
+str.slice(-2); // 'on'
 ```
 
 ### String Methods ###
@@ -282,7 +282,7 @@ _NOTE: Because strings are primitive values, any operation on them will return a
 **String.prototype.concat**
 - The ```concat``` method concatenates the string arguments to the calling string and **_returns_** a new string.
 ```javascript 
-'hello '.concat('world') // 'hello world'
+'hello '.concat('world'); // 'hello world'
 ```
 
 **String.prototype.includes**
@@ -290,9 +290,9 @@ _NOTE: Because strings are primitive values, any operation on them will return a
 - Has optional second argument for index to start searching at
 ```javascript
 let sentence = `qwerty`
-sentence.includes('w') // true
-sentence.includes('w', 2) // false
-sentence.includes('z') // false
+sentence.includes('w'); // true
+sentence.includes('w', 2); // false
+sentence.includes('z'); // false
 ```
 
 **String.prototype.split**
@@ -315,39 +315,57 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```
 -There are variations of the ```trim``` method. ```trimStart``` removes whitespace from start of string, ```trimEnd``` removes white space from end of string
 ```javascript
-'   once upon a time'.trimStart() // 'once upon a time'
-'once upon a time'.trimEnd() // 'once upon a time'
+'   once upon a time'.trimStart(); // 'once upon a time'
+'once upon a time'.trimEnd(); // 'once upon a time'
 ```
 
 **String.prototype.toUpperCase and String.prototype.toLowerCase**
 - Convert the strings to uppercase or lowercase characters respectively and _**returns**_ new string.
 ```javascript
-'Brandon'.toUpperCase() // 'BRANDON'
-'Brandon.toLowerCase() // 'brandon'
+'Brandon'.toUpperCase(); // 'BRANDON'
+'Brandon.toLowerCase(); // 'brandon'
 ```
 
 **String.prototype.charAt**
 - Takes an index as an argument and **_returns_** the character at that index for a given string. Nearly identical to using bracket notation
 ```javascript
-'brandon'.charAt(2) // 'a'
-'brandon'[2] // 'a'
+'brandon'.charAt(2); // 'a'
+'brandon'[2]; // 'a'
 
 // NOTE THE DIFFERENCE BELOW HOWEVER: When passing in indices for characters that don't exist
-'brandon'.charAt(10) // ''
-'brandon'[10] // undefined
+'brandon'.charAt(10); // ''
+'brandon'[10]; // undefined
 ```
 
 **String.prototype.charCodeAt**
 - Takes an index as an argument adn _**returns**_ the character code (UTF-16) of the character at the index
 ```javascript
-'abc'.charCodeAt(1) // 98
-'abc'.charcodeAt() // 97 --> NOTE: By default, returns char code of first character
+'abc'.charCodeAt(1); // 98
+'abc'.charcodeAt(); // 97 --> NOTE: By default, returns char code of first character
 ```
 
 **String.fromCharCode**
-- Takes a character code (UTF-16) and returns the character represented by that code
+- Takes a character code (UTF-16) and _**returns**_ the character represented by that code
 ```javascript
-String.fromCharCode(97) // 'a'
+String.fromCharCode(97); // 'a'
+```
+
+**String.prototype.startsWith and String.prototype.endsWith**
+- Takes a string argument and _**returns**_ true or false if the starting or ending characters match the characters passed in as the argument
+```javascript
+let name = 'brandon
+name.endsWith('don'); // true
+name.endsWith('and'); // false
+
+name.startsWith('br'); // true
+name.startsWith('and'); // false
+```
+
+**String.prototype.repeat**
+- Constructs and _**returns**_ a new string which contains a specified number of copies of the string on which it was called, concatenated together.
+```javascript
+let phrase = 'black and yellow '
+phrase.repeat(4); // 'black and yellow black and yellow black and yellow black and yellow
 ```
 
 ## Working with arrays ##

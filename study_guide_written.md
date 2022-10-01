@@ -255,6 +255,27 @@ str.substring(-2) // 'brandon'
 str.slice(-2) // 'on'
 ```
 
+**String methods**
+_NOTE: Because strings are primitive values, any operation on them will return a new string_
+
+String.prototype.concat
+ - The ```concat``` method concatenates the string arguments to the calling string and returns a new string.
+```javascript 
+'hello '.concat('world') // 'hello world'
+```
+
+String.prototype.indluces
+ - The ```includes``` takes a string as an argument and returns a boolean signifying whether that string exists within the string that ```includes``` was called on.
+ - Has optiona second argument for index to start searching at
+```javascript
+let sentence = `qwerty`
+sentence.includes('w') // true
+sentence.includes('w', 2) // false
+sentence.includes('z') // false
+```
+
+
+
 ## Working with arrays ##
 _Arrays are zero-indexed ordered collections_
 

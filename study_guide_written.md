@@ -263,6 +263,18 @@ str.substring(-2) // 'brandon'
 str.slice(-2) // 'on'
 ```
 
+### Method types###
+- Prototype method
+  - Can be called directly on corresponding data type
+- Static method
+  - Can ony be called on the constuctor for the data type
+```javascript
+// Prototype Method
+'abc'.charCodeAt(0) // 97
+// Static method
+String.fromCharCode(97) // 'a'
+```
+
 ### String Methods ###
 
 _NOTE: Because strings are primitive values, any operation on them will return a new string_
@@ -295,7 +307,7 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```
 
 **String.prototype.trim**
-- Removes whitespace from both ends of the string that it is called on
+- Removes whitespace from both ends of the string that it is called on and _**returns**_ new string.
 - Useful when getting input from the user
 ```javascript
 '    brandon corey    '.trim(); // brandon corey
@@ -305,6 +317,37 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```javascript
 '   once upon a time'.trimStart() // 'once upon a time'
 'once upon a time'.trimEnd() // 'once upon a time'
+```
+
+**String.prototype.toUpperCase and String.prototype.toLowerCase**
+- Convert the strings to uppercase or lowercase characters respectively and _**returns**_ new string.
+```javascript
+'Brandon'.toUpperCase() // 'BRANDON'
+'Brandon.toLowerCase() // 'brandon'
+```
+
+**String.prototype.charAt**
+- Takes an index as an argument and **_returns_** the character at that index for a given string. Nearly identical to using bracket notation
+```javascript
+'brandon'.charAt(2) // 'a'
+'brandon'[2] // 'a'
+
+// NOTE THE DIFFERENCE BELOW HOWEVER: When passing in indices for characters that don't exist
+'brandon'.charAt(10) // ''
+'brandon'[10] // undefined
+```
+
+**String.prototype.charCodeAt**
+- Takes an index as an argument adn _**returns**_ the character code (UTF-16) of the character at the index
+```javascript
+'abc'.charCodeAt(1) // 98
+'abc'.charcodeAt() // 97 --> NOTE: By default, returns char code of first character
+```
+
+**String.fromCharCode**
+- Takes a character code (UTF-16) and returns the character represented by that code
+```javascript
+String.fromCharCode(97) // 'a'
 ```
 
 ## Working with arrays ##

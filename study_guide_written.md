@@ -241,3 +241,30 @@ add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
   - Functions that always return a boolean value are called _Predicates_
 
 ## Working with strings ##
+_Strings are zero-indexed ordered collections_
+
+**Rerfernece string elements**
+ - Can do this using bracket notation
+ - Can also use a method like String.prototype.slice or substring
+```javascript
+let str = 'brandon';
+str[0] // 'b'
+str.slice(2, 4) // 'an'
+str.substring(2, 4) //'an'
+str.substring(-2) // 'brandon'
+str.slice(-2) // 'on'
+```
+
+## Working with arrays ##
+_Arrays are zero-indexed ordered collections_
+
+**Array Element Reference**
+ - Can do this the same as a string, using bracket notation
+ - Can use Array.prototype.slice
+```javascript
+let arr = [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'sentence' ];
+arr[0] // 'these'
+arr.slice() // [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'sentence' ] (NOTE: THIS IS A COPY)
+arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
+```
+```

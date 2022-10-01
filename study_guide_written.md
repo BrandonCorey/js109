@@ -255,7 +255,8 @@ str.substring(-2) // 'brandon'
 str.slice(-2) // 'on'
 ```
 
-**String methods**
+### String Methods ###
+
 _NOTE: Because strings are primitive values, any operation on them will return a new string_
 
 String.prototype.concat
@@ -264,7 +265,7 @@ String.prototype.concat
 'hello '.concat('world') // 'hello world'
 ```
 
-String.prototype.indluces
+String.prototype.includes
  - The ```includes``` takes a string as an argument and returns a boolean signifying whether that string exists within the string that ```includes``` was called on.
  - Has optiona second argument for index to start searching at
 ```javascript

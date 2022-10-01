@@ -259,15 +259,15 @@ str.slice(-2) // 'on'
 
 _NOTE: Because strings are primitive values, any operation on them will return a new string_
 
-String.prototype.concat
- - The ```concat``` method concatenates the string arguments to the calling string and returns a new string.
+**String.prototype.concat**
+- The ```concat``` method concatenates the string arguments to the calling string and _returns_ a new string.
 ```javascript 
 'hello '.concat('world') // 'hello world'
 ```
 
-String.prototype.includes
- - The ```includes``` takes a string as an argument and returns a boolean signifying whether that string exists within the string that ```includes``` was called on.
- - Has optiona second argument for index to start searching at
+**String.prototype.includes**
+- Takes a string as an argument and _returns_ a boolean signifying whether that string exists within the string that ```includes``` was called on.
+- Has optiona second argument for index to start searching at
 ```javascript
 let sentence = `qwerty`
 sentence.includes('w') // true
@@ -275,14 +275,15 @@ sentence.includes('w', 2) // false
 sentence.includes('z') // false
 ```
 
-
+**String.prototype.split**
+- Seperates a given string into multiple strings and _returns_ them in the form of an array
 
 ## Working with arrays ##
 _Arrays are zero-indexed ordered collections_
 
 **Array Element Reference**
- - Can do this the same as a string, using bracket notation
- - Can use Array.prototype.slice
+- Can do this the same as a string, using bracket notation
+- Can use Array.prototype.slice
 ```javascript
 let arr = [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'sentence' ];
 arr[0] // 'these'
@@ -293,9 +294,9 @@ arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
 
 **Object Element Reference**
- - Can use bracket notation or dot notation
- - key/property names in an object must be unique
- - Object.keys(obj) method and Object.values(obj) method can be used to reference their respective components (keys, values)
+- Can use bracket notation or dot notation
+- key/property names in an object must be unique
+- Object.keys(obj) method and Object.values(obj) method can be used to reference their respective components (keys, values)
 ```javascript
 let name = { last: ever, first: greatest } // like a sprained ankle boy aint nothing to play with
 name.last = 'Corey';

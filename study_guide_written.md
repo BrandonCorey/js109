@@ -353,7 +353,7 @@ String.fromCharCode(97); // 'a'
 **String.prototype.startsWith and String.prototype.endsWith**
 - Takes a string argument and _**returns**_ true or false if the starting or ending characters match the characters passed in as the argument
 ```javascript
-let name = 'brandon
+let name = 'brandon';
 name.endsWith('don'); // true
 name.endsWith('and'); // false
 
@@ -364,7 +364,7 @@ name.startsWith('and'); // false
 **String.prototype.repeat**
 - Constructs and _**returns**_ a new string which contains a specified number of copies of the string on which it was called, concatenated together.
 ```javascript
-let phrase = 'black and yellow '
+let phrase = 'black and yellow ';
 phrase.repeat(4); // 'black and yellow black and yellow black and yellow black and yellow
 ```
 

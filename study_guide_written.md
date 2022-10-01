@@ -248,6 +248,18 @@ add(5, 4) // 9 is the value returned, 5 and 4 are the arugments
 - The `return` key word creates a return statement that can be used to explicity return a value from a function
   - Functions that always return a boolean value are called _Predicates_
 
+### Method types ###
+- Prototype method
+  - Can be called directly on corresponding data type
+- Static method
+  - Can ony be called on the constuctor for the data type
+```javascript
+// Prototype Method
+'abc'.charCodeAt(0) // 97
+// Static method
+String.fromCharCode(97) // 'a'
+```
+
 ## Working with strings ##
 _Strings are zero-indexed ordered collections_
 
@@ -261,18 +273,6 @@ str.slice(2, 4) // 'an'
 str.substring(2, 4) //'an'
 str.substring(-2) // 'brandon'
 str.slice(-2) // 'on'
-```
-
-### Method types###
-- Prototype method
-  - Can be called directly on corresponding data type
-- Static method
-  - Can ony be called on the constuctor for the data type
-```javascript
-// Prototype Method
-'abc'.charCodeAt(0) // 97
-// Static method
-String.fromCharCode(97) // 'a'
 ```
 
 ### String Methods ###

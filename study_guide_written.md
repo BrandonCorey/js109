@@ -391,11 +391,33 @@ arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 ```javascript
 ['a', 'b', 'c'].forEach((element, idx) => {
   console.log(`The index of ${element} is ${idx}`);
-// The index of a is 0
-// The index of b is 1
-// The index of c is 2
-// undefined
 });
+// 'The index of a is 0'
+// 'The index of b is 1'
+// 'The index of c is 2'
+// undefined
+```
+**Array.prototype.filter**
+- Filter passes the current element value and index to a callback function
+- For each element, the callback function returns a value
+- If the value ```returned``` by the callback is truthy, ```filer``` will select the current element and put it into an array
+- The filter method ```returns``` an array of all the filtered elements when all iterations have completed
+
+```javascript
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array.filter(nums => nums % 2 === 0); // [2, 4, 6, 8, 10]
+array.filter(nums => nums + 5) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; (All values in callback evaluate to truthy, so each element in array is returned)
+
+array.filter(nums => {
+  return nums > 7;
+});
+
+// [8, 9, 10]
+
+array.filter(nums=> {
+  nums > 7;
+}):
+// [] (Forgot to return the values, so filter does not select any elements to be returned in resulting array)
 ```
 
 ## Object Element Reference ##

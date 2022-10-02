@@ -429,7 +429,13 @@ array.filter(nums=> {
 
 ```javascript
 let array = [1, 2, 3, 4, 5];
-array.map(num => num + 5);  // [6, 7, 8, 9, 10]; 
+
+array.map(num => num + 5);  // [ 6, 7, 8, 9, 10 ]; 
+array.map(num % 2 === 1); // [ true, false, true, false, true ]
+array.map(num => {
+  num * 2;
+});
+// [ undefined, undefined, undefined ];
 ```
 
 ## Object Element Reference ##

@@ -381,6 +381,19 @@ arr.slice() // [ 'these', 'are', 'are', 'different', 'words', 'within', 'a', 'se
 arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 ```
 
+### Array Methods ###
+
+**Array.prototype.forEach**
+-  A method that executes a provided callback function once for each array element. 
+-  ```forEach``` passes two arguments to the callback function: (Value of current element, index of current element)
+-  The callback function determines what happens to each element on each iteration
+-  _**Returns**_ undefined
+```javascript
+['a', 'b', 'c'].forEach((element, idx) => {
+  console.log(`The index of ${element} is ${idx}`);
+});
+```
+
 ## Object Element Reference ##
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
 

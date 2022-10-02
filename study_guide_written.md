@@ -437,6 +437,10 @@ array.map(num => {
 });
 // [ undefined, undefined, undefined ];
 ```
+**Array.prototype.find**
+- ```find``` pases the current element value and index to a callback function
+- The callback function ```returns``` the truthy and falsey values to ```find```
+- Find returns the first truthy value `returned` from the callback function, otherwise, undefined.
 
 ## Object Element Reference ##
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_

@@ -280,13 +280,13 @@ str.slice(-2); // 'on'
 _NOTE: Because strings are primitive values, any operation on them will return a new string_
 
 **String.prototype.concat**
-- The ```concat``` method concatenates the string arguments to the calling string and **_returns_** a new string.
+- The ```concat``` method concatenates the string arguments to the calling string and ```returns``` a new string.
 ```javascript 
 'hello '.concat('world'); // 'hello world'
 ```
 
 **String.prototype.includes**
-- Takes a string as an argument and **_returns_** a boolean signifying whether that string exists within the string that ```includes``` was called on.
+- Takes a string as an argument and ```returns``` a boolean signifying whether that string exists within the string that ```includes``` was called on.
 - Has optional second argument for index to start searching at
 ```javascript
 let sentence = `qwerty`
@@ -296,7 +296,7 @@ sentence.includes('z'); // false
 ```
 
 **String.prototype.split**
-- Seperates a given string into multiple strings and **_returns_** them in the form of an array
+- Seperates a given string into multiple strings and ```returns``` them in the form of an array
 - Has optional argument that determines the seperator character for the split
   - No argument specification returns the entire string as an array. Empty string argument returns split on each character.
 ```javascript
@@ -307,7 +307,7 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```
 
 **String.prototype.trim**
-- Removes whitespace from both ends of the string that it is called on and _**returns**_ new string.
+- Removes whitespace from both ends of the string that it is called on and ```returns``` new string.
 - Useful when getting input from the user
 ```javascript
 '    brandon corey    '.trim(); // brandon corey
@@ -320,14 +320,14 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```
 
 **String.prototype.toUpperCase and String.prototype.toLowerCase**
-- Convert the strings to uppercase or lowercase characters respectively and _**returns**_ new string.
+- Convert the strings to uppercase or lowercase characters respectively and ```returns``` new string.
 ```javascript
 'Brandon'.toUpperCase(); // 'BRANDON'
 'Brandon'.toLowerCase(); // 'brandon'
 ```
 
 **String.prototype.charAt**
-- Takes an index as an argument and **_returns_** the character at that index for a given string. Nearly identical to using bracket notation
+- Takes an index as an argument and ```returns``` the character at that index for a given string. Nearly identical to using bracket notation
 ```javascript
 'brandon'.charAt(2); // 'a'
 'brandon'[2]; // 'a'
@@ -338,20 +338,20 @@ string.split(' '); // [ 'I', 'went', 'to', 'the', 'store' ]
 ```
 
 **String.prototype.charCodeAt**
-- Takes an index as an argument adn _**returns**_ the character code (UTF-16) of the character at the index
+- Takes an index as an argument and ```returns``` the character code (UTF-16) of the character at the index
 ```javascript
 'abc'.charCodeAt(1); // 98
 'abc'.charcodeAt(); // 97 --> NOTE: By default, returns char code of first character
 ```
 
 **String.fromCharCode**
-- Takes a character code (UTF-16) and _**returns**_ the character represented by that code
+- Takes a character code (UTF-16) and ```returns``` the character represented by that code
 ```javascript
 String.fromCharCode(97); // 'a'
 ```
 
 **String.prototype.startsWith and String.prototype.endsWith**
-- Takes a string argument and _**returns**_ true or false if the starting or ending characters match the characters passed in as the argument
+- Takes a string argument and ```returns``` true or false if the starting or ending characters match the characters passed in as the argument
 ```javascript
 let name = 'brandon';
 name.endsWith('don'); // true
@@ -362,7 +362,7 @@ name.startsWith('and'); // false
 ```
 
 **String.prototype.repeat**
-- Constructs and _**returns**_ a new string which contains a specified number of copies of the string on which it was called, concatenated together.
+- Constructs and ```returns``` a new string which contains a specified number of copies of the string on which it was called, concatenated together.
 ```javascript
 let phrase = 'black and yellow ';
 phrase.repeat(4); // 'black and yellow black and yellow black and yellow black and yellow
@@ -387,10 +387,14 @@ arr.slice(-4, -1) // [ 'words', 'within', 'a' ]
 -  A method that executes a provided callback function once for each array element. 
 -  ```forEach``` passes two arguments to the callback function: (Value of current element, index of current element)
 -  The callback function determines what happens to each element on each iteration
--  _**Returns**_ undefined
+-  ```Returns``` undefined
 ```javascript
 ['a', 'b', 'c'].forEach((element, idx) => {
   console.log(`The index of ${element} is ${idx}`);
+// The index of a is 0
+// The index of b is 1
+// The index of c is 2
+// undefined
 });
 ```
 

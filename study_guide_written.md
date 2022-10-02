@@ -441,7 +441,19 @@ array.map(num => {
 - ```find``` pases the current element value and index to a callback function
 - The callback function ```returns``` the truthy and falsey values to ```find```
 - Find returns the first truthy value `returned` from the callback function, otherwise, undefined.
+```javascript
 
+const customers = [
+  { name: "Joe Smith", phone: 5081113456 },
+  { name: "Bob Johnson", phone: 5086789112 },
+  { name: "Brandon Corey", phone: 5088081106 },
+];
+
+customers.find(customer => {
+  return (customer.name).toLowerCase() === 'brandon corey'
+}); 
+// {name: 'brandon corey', phone: 5088081106}
+```
 ## Object Element Reference ##
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
 

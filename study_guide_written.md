@@ -496,15 +496,12 @@ name.last[0] // Returns 'C' since last is now 'Corey';
 - Can iterate over an object using a `for in` loop
 
 ```javascript
-let person = {
-  name: 'brandon',
-  age: 23,
-  height: "5'9"
-};
-```
+let person = { name: 'brandon', age: 23, eight: "5'9" };
+
 for (let props in person) {
   console.log(`The ${props} of ${person.name} is ${person[props]}`)
 }
+```
 
 **NOTE: `for in ` will iterate over an object's prototype (an object from which it inherited properties) as well**
 
@@ -544,3 +541,28 @@ for (let props in obj2) {
 // 15
 ```
  
+**Object.keys**
+- Static method returns an object's keys as an array
+```
+let person = { name: 'brandon', age: 23, eight: "5'9" };
+
+let personKeys = Object.keys(person);
+
+console.log(personKeys) // [ 'name', 'age', 'height' ];
+
+personKeys.forEach(prop => console.log(person[prop]);
+// 'brandon'
+// 23
+// "5'9"
+```
+
+**Object.values**
+- Static method returns an Object's values as an array
+
+```javascript
+let person = { name: 'brandon', age: 23, eight: "5'9" };
+
+let personValues = Object.values(person);
+
+console.log(personValues); // [ 'brandon', 23, "5'9"];
+```

@@ -438,7 +438,7 @@ array.map(num => {
 // [ undefined, undefined, undefined ];
 ```
 **Array.prototype.find**
-- ```find``` pases the current element value and index to a callback function
+- ```find``` passes the current element value and index to a callback function
 - The callback function ```returns``` the truthy and falsey values to ```find```
 - Find returns the first truthy value `returned` from the callback function, otherwise, undefined.
 ```javascript
@@ -454,6 +454,31 @@ customers.find(customer => {
 }); 
 // {name: 'brandon corey', phone: 5088081106}
 ```
+
+**Array.prototype.sort**
+- `sort` method sorts elements in place, returning the reference to the original array now sorted
+- `sort` by default will convert elements to strings, and then compare based on UTF-16 codes and sort in ascending order
+- `sort` takes an optional callbacck function as an argument
+- Callback funciton takes two arguments, two elements to be compared
+- Callback function logic
+  - if a is less than b by some ordering criterion, `return` -1
+  - if a is greater than b by some ordering criterion, `return`
+  - else return 0
+
+```javascript
+let arr = [10 , 15, 12, 11, 7, 5]
+
+arr.sort((a, b) => a - b) // [ 5, 7, 10, 11, 12, 15 ]
+
+arr.sort(a, b) => {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+});
+
+[ 5, 7, 10, 11, 12, 15 ]
+```
+
 ## Object Element Reference ##
 _Objects are collections that use key-value pairs, where the key is a string and the value is any JavaScript data type_
 

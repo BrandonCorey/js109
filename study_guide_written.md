@@ -492,7 +492,7 @@ name.last = 'Corey';
 name['first'] = 'Brandon';
 name.last[0] // Returns 'C' since last is now 'Corey';
 ```
-**Iteration**
+### Iterators ###
 - Can iterate over an object using a `for in` loop
 
 ```javascript
@@ -540,6 +540,8 @@ for (let props in obj2) {
 // 11
 // 15
 ```
+ 
+### Object Methods ### 
  
 **Object.keys**
 - Static method returns an object's keys as an array

@@ -595,7 +595,7 @@ console.log(person); // { name: 'brandon', age: 23, height: "5'9" };
 - Static method that can merge to objects (mutating) as well as creates a shallow copy of an object (non mutating)
 ```javascript
 let person = { name: 'brandon', age: 23, height: "5'9" };
-let personContinued = { major: 'economics', hobbies: 'weight lifting' }
+let personContinued = { major: 'economics', hobbies: 'weight lifting' };
 
 Object.assign(person, personContinued);
 
@@ -603,7 +603,7 @@ console.log(person); // { name: 'brandon', age: 23, height: "5'9", major: 'econo
 
 OR
 
-let newObj = Object.assign({}, person, personContinued) // { name: 'brandon', age: 23, height: "5'9", major: 'economics', hobbies: 'weight lifting' }
+let newObj = Object.assign({}, person, personContinued); // { name: 'brandon', age: 23, height: "5'9", major: 'economics', hobbies: 'weight lifting' }
 
 // This one creates a copy. Can use empty Object as target, and can copy or merge any additonal object arguments
 

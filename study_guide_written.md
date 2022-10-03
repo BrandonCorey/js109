@@ -566,3 +566,45 @@ let personValues = Object.values(person);
 
 console.log(personValues); // [ 'brandon', 23, "5'9"];
 ```
+
+**Object.entries**
+- Static method returns an array of nested arrays, with each nested array corresponding to each key-value pair of the original object
+```javascript
+let person = { name: 'brandon', age: 23, height: "5'9" };
+
+let personArray = Object.entries(person); // [ [ 'name', 'brandon' ], [ 'age', 23 ], [ 'height', "5'9" ] ]
+
+personArray.forEach(pair => {
+  let [ key, value ] = pair;
+  console.log(`The value for ${key} is ${value}`)
+});
+```
+
+**Object.fromEntries**
+- Static method returns an object when passed a nested array of key value pairs as an argument
+
+```javascript
+let personArr = [ [ 'name', 'brandon' ], [ 'age', 23 ], [ 'height', "5'9" ] ];
+
+let person = Object.fromEntries(personArr);
+
+console.log(person); // { name: 'brandon', age: 23, height: "5'9" };
+```
+
+**Object.assign**
+- Static method that can merge to objects (mutating) as well as creates a shallow copy of an object (non mutating)
+```javascript
+let person = { name: 'brandon', age: 23, height: "5'9" };
+let personContinued = { major: 'economics', hobbies: 'weight lifting' }
+
+Object.assign(person, personContinued);
+
+console.log(person); // { name: 'brandon', age: 23, height: "5'9", major: 'economics', hobbies: 'weight lifting' } MUTATES person, not personContinued
+
+OR
+
+let newObj = Object.assign({}, person, personContinued) // { name: 'brandon', age: 23, height: "5'9", major: 'economics', hobbies: 'weight lifting' }
+
+// This one creates a copy. Can use empty Object as target, and can copy or merge any additonal object arguments
+
+```

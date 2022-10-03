@@ -470,7 +470,7 @@ let arr = [10 , 15, 12, 11, 7, 5]
 
 arr.sort((a, b) => a - b) // [ 5, 7, 10, 11, 12, 15 ]
 
-arr.sort(a, b) => {
+arr.sort((a, b) => {
   if (a < b) return -1;
   if (a > b) return 1;
   return 0;
@@ -492,3 +492,55 @@ name.last = 'Corey';
 name['first'] = 'Brandon';
 name.last[0] // Returns 'C' since last is now 'Corey';
 ```
+**Iteration**
+- Can iterate over an object using a `for in` loop
+
+```javascript
+let person = {
+  name: 'brandon',
+  age: 23,
+  height: "5'9"
+};
+```
+for (let props in person) {
+  console.log(`The ${props} of ${person.name} is ${person[props]}`)
+}
+
+**NOTE: `for in ` will iterate over an object's prototype (an object from which it inherited properties) as well**
+
+```javascript
+let obj1 = { a: 5, b: 10 }
+let obj2 = Object.create(obj1);
+obj2.c = 11;
+obj2.d = 15;
+
+console.log(obj1) // { a: 5, b: 10 }
+console.log(obj2) // { c: 11, d: 15 }
+
+for (let props in obj2) {
+  console.log(obj2[props]);
+}
+// 11
+// 15
+// 5
+// 10
+```
+- Can get around this behavior using `hasOwnProperty` method
+  - `hasOwnProperty` takes an argument of a string
+  - `hasOwnProperty` returns `true` if the name of the argument is a property of the object that it is called on. **Excludes inhertied properties**
+```javascript
+let obj1 = { a: 5, b: 10 }
+let obj2 = Object.create(obj1);
+obj2.c = 11;
+obj2.d = 15;
+
+console.log(obj1) // { a: 5, b: 10 }
+console.log(obj2) // { c: 11, d: 15 }
+
+for (let props in obj2) {
+  console.log(obj2[props]);
+}
+// 11
+// 15
+```
+ 

@@ -157,9 +157,12 @@ String(20); // Coerces number 20 to string '20'
 
 **Implicit Coercion**
 - When the JavaScript engine coerces one data type to another
+- If using non-strict or relational operators, operands of different types will always be converted to numbers before being compared
 ```javascript
 10 + 'peanutbutter'; // Coerces number 10 to string '10' and then concatenates with peanutbutter --> '10peanutbutter'
 true * 5; // true is coerced to number 1 and then multiplied by 5 --> 5
+true > null;    // true -- becomes 1 > 0
+undefined >= 1; // false -- becomes NaN >= 1
 '123' == 123; // '123' is coerced to 123 number due to loose equality operator
 if ('randomtruthy') console.log('hello'); // All values are coerced to boolean within conditional statements based on truthiness of the value
 ```
@@ -609,4 +612,68 @@ let newObj = Object.assign({}, person, personContinued); // { name: 'brandon', a
 
 // This one creates a copy. Can use empty Object as target, and can copy or merge any additonal object arguments
 
+```
+## Arrays are Objects ##
+- Arrays are a type of object
+- The property of array that is dealth with object is `length`;
+   - **NOTE** `length` is not listed as property of array when using `Object.keys` method
+- All indices of an array are also property names of the object
+  - The indices are translated to strings however in the context of property names
+```javascript
+let arr = [1, 2, 3];
+Object.keys(arr); // [ '0', '1', '2' ]
+arr['3'] = 4;
+console.log(arr); // [1, 2, 3, 4];
+```
+
+**Elements vs Properties**
+- Elements are just the values of non-negative interger properties of an array
+- All non-interger or negative interger properties of an array are **NOT** considered elements
+- Iterative array methods ignore all non-element values.
+
+```javascript
+let arr = [1, 2, 3];
+arr['banana'] = 'yummy';
+console.log(arr)// [1, 2, 3, banana: 'yummy']
+arr.length // 3
+arr.forEach(element => console.log(element));
+// 1
+// 2
+// 3
+```
+
+## Pass by Reference vs Pass by value ##
+
+### Pass by value ###
+- When a variable is passed as an argument to a function, the function cannot modify the orignial value, only a copy of it.
+- **_JavaScript is pass by value for Primitives_**
+- When an primitive value argument is passed to a function, the corresponding parameter is assigned the same value of the argument, but not to the og value in memory. 
+```javascript
+function changeValue(value) {
+  value = 5; // Locally scoped
+}
+
+function mainFunction() {
+  let value = 10; // Locally scoped
+  changeValue(value); // Explanation below
+  console.log(value); // logs 10;
+}
+mainfunction(); // 10
+```
+- When `value` in `mainFunction` is passed to `changeValue` as an argument, the `value` parameter for `changeValue` is assigned a value of 10, reassigned to 5
+- Because the `value` parameter for `changeValue` is locally scoped, mainFunction's `value` is unaffected
+
+### Pass by Reference ### 
+- When a variable is passed as an argument to a function, the function can modify the original variable's value(s).
+- _**JavaScript**_ is pass by reference for Objects
+- With objects, since variables act as pointers to the original object, we are passing a reference as an argument, opposed to a value.
+```javascript
+let array = [1, 2, 3, 4, 5];
+
+function removeLastElement(arrayArg) {
+  arrayArg.pop();
+}
+
+removeLastElement(array);
+console.log(array); // [1, 2, 3, 4]; // Permnantly altered
 ```

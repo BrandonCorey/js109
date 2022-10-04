@@ -694,9 +694,14 @@ newArray = array // true // Returns act the same as the argumenbts. In this case
 - So, each variable points directly to the memory location where the value lives
 - When you reassign a primitive, the value at that specific memory location that is being pointed to is **CHANGED**
 ```javascript
-let x = 5; // x is the name of mem address 0x1234 which contains value of 5 (x points to mem address 0x1234)
-x = 10; // x is the name of mem address 0x1234 which contains value of 10 (x points to mem address 0x1234)
-let y = x; // y is the name of mem address 0x4567 which contains value of 10; (y points to mem address 0x4567)
+let x = 5; // x is the name of mem address 0x1234, (x points to mem address 0x1234)
+           // which contains value of 5 
+           
+x = 10; // x is the name of mem address 0x1234, (x points to mem address 0x1234)
+        // which contains value of 10 
+        
+let y = x; // y is the name of mem address 0x4567, (y points to mem address 0x4567)
+           // which contains value of 10 
 ```
 
 **Objects**

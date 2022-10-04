@@ -676,4 +676,43 @@ function removeLastElement(arrayArg) {
 
 removeLastElement(array);
 console.log(array); // [1, 2, 3, 4]; // Permnantly altered
+
+function returnsFollowSameRules(array) {
+  return array;
+}
+
+let newArray = returnsFollowSameRules(array);
+newArray = array // true // Returns act the same as the argumenbts. In this case, we are literally returning a reference to the same array;
+```
+
+## Variables as Pointers ##
+
+- When a variable is declared, JavaScript allocates a spot somewhere in memory to hold its value
+
+**Primitves**
+- With primitive values, the actual value assigned to variable is stored within the allocated memory.
+- So, each variable points directly to the memory location where the value lives
+- When you reassign a primitive, the value at that specific memory location that is being pointed to is **CHANGED**
+```javascript
+let x = 5; // x is the name of mem address 0x1234 which contains value of 5 (x points to mem address 0x1234)
+x = 10; // x is the name of mem address 0x1234 which contains value of 10 (x points to mem address 0x1234)
+let y = x; y is the name of mem address 0x4567 which contains value of 10; (y points to mem address 0x4567)
+```
+
+**Objects**
+- With Objects, the variable points to a memory location that contains a reference to the object, rather than a value
+- As a result, any variable that is assigned the value of an object will being pointing to the same reference
+- **UNLIKE A PRIMITIVE**, if you reassign an object, rather than mutate it, the object will now live at a new memory location
+```javascript
+let obj = { a: 1, b: 2 } // obj is the name of mem address 0x1234 (points to 0x1234)
+                         // which contains a value of 0x11562 (contains reference to Object)
+                         // mem address 0x11562 contains a value of { a: 1, b: 2 }
+
+obj.c = 3 // obj is the name of mem address 0x1234, (points to 0x1234)
+          // which contains a value of 0x11562 (contains reference to Object)
+          // mem address 0x11562 contains a value of { a: 1, b: 2, c: 3}
+
+obj = { a: 1 } // obj is the name of mem address 0x1234, (points to 0x1234)
+               // which contains a value of 0x33456 (contains reference to Object)
+               // mem address 33456 contains a value of { a: 1 };
 ```

@@ -809,5 +809,5 @@ const add = (a, b) => return a + b;
 ```javascript
 const add = (a, b) => a + b; // definition
 
-add(5,4); // invocation // When invoked, the function above is executed. 5 and 4 are assigned to the parameters of the function definition, and the body executes.
+add(5,4); // invocation // When invoked, the function above is executed. The values 5 and 4 are passed to the function definition, and the body executes.
 ```

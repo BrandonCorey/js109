@@ -721,3 +721,11 @@ obj = { a: 1 } // obj is the name of mem address 0x1234, (points to 0x1234)
                // which contains a value of 0x33456 (contains reference to Object)
                // mem address 33456 contains a value of { a: 1 };
 ```
+## console.log vs return ##
+- console.log is a method that prints the specified argument to the console
+- console.log returns undefined
+- printing something to the console is considered a "side effect" is the context of a function
+
+- return is a keyword that specifies a value that is to be explicity returned from a function
+- this value can be a string, number, object, or even another function 
+- a return value from a function can then be used after the function is called

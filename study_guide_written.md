@@ -840,3 +840,10 @@ const add = (a, b) => a + b;
 
 **NOTE**
 - If a function declaration is nested within another function, it is no longer considered a declaration, it is an expression
+
+## Implicit return value of a function ##
+
+**Functions implicitly return `undefined`**
+- Remember that JS methods can have implicit return values that are not `undefined`. Must read documentation to determine return values of non-user-defined methods.
+
+**You can specify an explcit return value using the `return` keyword**

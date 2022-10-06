@@ -729,3 +729,15 @@ obj = { a: 1 } // obj is the name of mem address 0x1234, (points to 0x1234)
 - return is a keyword that specifies a value that is to be explicity returned from a function
 - this value can be a string, number, object, or even another function 
 - a return value from a function can then be used after the function is called
+
+```javascript
+function print(argument) {
+  console.log(argument);
+}
+print('hello'); // prints hello, returns undefined
+
+function return(argument) {
+  return argument;
+}
+return('helloo') // prints nothing, returns 'hello';
+```

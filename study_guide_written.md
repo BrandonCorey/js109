@@ -819,7 +819,7 @@ add(5,4); // invocation // When invoked, the function above is executed. The val
 - Use function keyword
 - Are hoisted to top of JavaScript program. Allows for calling of function before declaration
 ```javascript
-function(a, b) {
+function add(a, b) {
   return a + b;
 }
 ```

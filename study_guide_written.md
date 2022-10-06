@@ -811,3 +811,32 @@ const add = (a, b) => a + b; // definition
 
 add(5,4); // invocation // When invoked, the function above is executed. The values 5 and 4 are passed to the function definition, and the body executes.
 ```
+
+## Function declarations, expressions, and arrow expressions
+- These are the three ways to define a function
+
+**Declarations**
+- Use function keyword
+- Are hoisted to top of JavaScript program. Allows for calling of function before declaration
+```javascript
+function(a, b) {
+  return a + b;
+}
+```
+**Expression**
+- An annonymous function that may be stored in a variable
+- Not hoisted to top of program
+```javascript
+const add = function (a,b) {return a + b};
+```
+
+**Arrow expression**
+- An annonymous function that may be stored in a variable
+- Syntactically unique, does not require return keyword if single expression is contained within function body
+  - Also does not require curly braces in this situation
+```javascript
+const add = (a, b) => a + b;
+```
+
+**NOTE**
+- If a function declaration is nested within another function, it is no longer considered a declaration, it is an expression

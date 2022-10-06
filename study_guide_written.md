@@ -771,3 +771,43 @@ return('helloo') // prints nothing, returns 'hello';
  - Values that evaluate to truthy
   - Every other value not listed above
   - Remember that type coercion can produce some of the above values implicitly
+
+## Functions ##
+
+## Side effects ##
+- Function re-assigns any non-locally scoped variable
+- Mutates the value of any object referenced by a non-local variable (an argument, or a globally scoped object)
+- It reads from or writes to a file. Includes writing to the console or reading input from the terminal (user input)
+- Raises an exception without handling it
+- Calls another function that has side effects
+
+### Function definition and invocation ###
+
+**Function definition**
+- A function can be defined through either a function _declaration_ or a function _expression_
+- A definition includes the function name, as well as the parameters of the function
+
+```javascript
+
+// declaration (these are hoisted to the top of the program and saved for later)
+function add(a, b) {
+  return a + b;
+}
+// expression (technically annonymous function stored in a variable)
+const add = function (a,b) {return a + b};
+
+// expression (technically annonymous function stored in a variable)
+const add = (a, b) => return a + b;
+```
+
+**Function invocation**
+- Functions are invoked or called by typing their name and providing some optional values as arguments
+- When a function is invoked
+  - The program then jumps to the definition of the function that is being called
+  - The values of the arguments are assigned to the values of the parameters within the function definition, and then the function body executes (from the definition)
+  - A value is then returned from the function execution to the caller. This value can be saved as a variable
+```javascript
+const add = (a, b) => a + b; // definition
+
+add(5,4); // invocation // When invoked, the function above is executed. 5 and 4 are assigned to the parameters of the function definition, and the body executes.
+```

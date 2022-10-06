@@ -722,10 +722,13 @@ obj = { a: 1 } // obj is the name of mem address 0x1234, (points to 0x1234)
                // mem address 33456 contains a value of { a: 1 };
 ```
 ## console.log vs return ##
+
+**console.log**
 - console.log is a method that prints the specified argument to the console
 - console.log returns undefined
 - printing something to the console is considered a "side effect" is the context of a function
 
+**return**
 - return is a keyword that specifies a value that is to be explicity returned from a function
 - this value can be a string, number, object, or even another function 
 - a return value from a function can then be used after the function is called
@@ -741,3 +744,30 @@ function return(argument) {
 }
 return('helloo') // prints nothing, returns 'hello';
 ```
+
+ ## Truthiness vs Boolean ##
+ 
+ **Boolean**
+ - JavaScript uses the `true` and `false` primitive values as booleans
+ - These help us build conditional logic based on the premise of whether a statement is true or false
+ - Typically, these values aren't explicitly used, and insted condtional expressions evaluate to a boolean
+ ```javascript
+ let name = 'brandon';
+ 
+ if (name.length < 10) console.log(name) // prints brandon as the conditional statement evalued to true
+ ```
+ 
+ **Truthiness**
+ - Values that evaluate to `true` are considered `truthy`
+ - Values that evaluate to `false` are considered `falsey`
+ 
+ **Truthy vs falsy**
+ - Values to evaluate to falsy
+  - `false`
+  - `undefined`
+  - `0`
+  - `""`
+  - `NaN
+ - Values that evaluate to truthy
+  - Every other value not listed above
+  - Remember that type coercion can produce some of the above values implicitly

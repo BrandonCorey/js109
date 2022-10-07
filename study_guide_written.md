@@ -880,18 +880,18 @@ arr.map(num => num * num); // map is the higher order function here, (num => num
 **legal/non-idiomatic**
 - If a name is legal in JavaScript, it is valid, however poor practice with standard library
 - External libraries can rely heavily on these non-idiomatic names as to not conflict with vanilla js or other libraries
-`fizz_buzz`
-`fizzBUZZ`
-`MILESPERHOUR`
-`_hello`
-`Sgoodbye`
+- `fizz_buzz`
+- `fizzBUZZ`
+- `MILESPERHOUR`
+- `_hello`
+- `Sgoodbye`
 
 **idiomatic**
 - A type of naming convention that aligns with common practice among programmers for a specific language
 - camelCase variables for example
-`employee`
-`fizzbuzz`
-`speedOfLight`
-`m00n`
-`destinationURL` (URL is an acronym so can be capitalized)
-`MILES_PER_HOUR`
+- `employee`
+- `fizzbuzz`
+- `speedOfLight`
+- `m00n`
+- `destinationURL` (URL is an acronym so can be capitalized)
+- `MILES_PER_HOUR`

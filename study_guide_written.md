@@ -847,3 +847,51 @@ const add = (a, b) => a + b;
 - Remember that JS methods can have implicit return values that are not `undefined`. Must read documentation to determine return values of non-user-defined methods.
 
 **You can specify an explcit return value using the `return` keyword**
+
+## First-Class Functions ##
+_Similar to primitive values and objects, first-class functions have the following properties:_
+- Can be assigned to a variable or an element of a data structure
+- Can be passed as an argument to a function
+- Can be returned as the return value of a function
+**Functions can effectively be treated like any other type of value**
+
+### Higher Order Functions ###
+- Functions that either
+  - Take another function as an argument
+  - Return other functions
+
+### Callback Functions ###
+- Functions that are passed to other functions as arguments
+
+```javascript
+let arr = [1, 2, 3];
+arr.map(num => num * num); // map is the higher order function here, (num => num * num) is the call back function (annonymous arrow function expression)
+```
+
+**Note: Helpful launch school notes on breaking down higher order and callback functions**
+- What type of action is being performed? Method call? Callback? Conditional? Something else?
+- On what value is that action performed?
+- What is the side-effect of that action (e.g., output or destructive action)?
+- What is the return value of that action?
+- Is the return value used by whatever instigated the action?
+
+## Legal vs idomatic ##
+
+**legal/non-idiomatic**
+- If a name is legal in JavaScript, it is valid, however poor practice with standard library
+- External libraries can rely heavily on these non-idiomatic names as to not conflict with vanilla js or other libraries
+`fizz_buzz`
+`fizzBUZZ`
+`MILESPERHOUR`
+`_hello`
+`Sgoodbye`
+
+**idiomatic**
+- A type of naming convention that aligns with common practice among programmers for a specific language
+- camelCase variables for example
+`employee`
+`fizzbuzz`
+`speedOfLight`
+`m00n`
+`destinationURL` (URL is an acronym so can be capitalized)
+`MILES_PER_HOUR`

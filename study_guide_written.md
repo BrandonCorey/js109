@@ -876,6 +876,18 @@ arr.map(num => num * num); // map is the higher order function here, (num => num
 - What is the return value of that action?
 - Is the return value used by whatever instigated the action?
 
+
+## Implementation-level vs. user-level ##
+```javascript
+function reverseSentece(sentence) {
+  let result = [];
+  let words = sentence.split(' ');
+  for (let idx = words.length; idx >= 0; idx--) {
+    result.push(words[idx]);
+  }
+  return result;
+}
+```
 ## Legal vs idomatic ##
 
 **legal/non-idiomatic**

@@ -879,15 +879,20 @@ arr.map(num => num * num); // map is the higher order function here, (num => num
 
 ## Implementation-level vs. user-level ##
 ```javascript
-function reverseSentece(sentence) {
+function reverseSentence(sentence) {
   let result = [];
   let words = sentence.split(' ');
-  for (let idx = words.length; idx >= 0; idx--) {
+  for (let idx = words.length - 1; idx >= 0; idx--) {
     result.push(words[idx]);
   }
-  return result;
+  return result.join(' ');
 }
 ```
+**Implementation-level**
+_reverseSentence function is declared and takes one string argument. A result variable is declared  in the function body and initalized to an empty array. The split method is then called on the string argument and assigned to the variable `words`. A for loop, with o local variable `idx` declared and initalized to the index of the a element in the words array, iterates through the array backwards, pushing each word in the sentence to the `result` array. The `join` method is called on the resulting array with a space as the join argument and the string is returned.
+
+**User level**
+_reverseSentence is a function that takes one argument and returns a new string. The returned string will have a reversed order on each space contained within the original string_
 ## Legal vs idomatic ##
 
 **legal/non-idiomatic**

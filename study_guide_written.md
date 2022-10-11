@@ -1,6 +1,7 @@
 # Study Guide: JS109 #
 
 **NOTE: ALWAYS MENTION RETURN VALUES AND SIDE EFFECTS IF ANY ARE PRESENT**
+- Variables are not passed to or returned by functions: values or references are passed.
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**
 - A named area of a program's memory where data can be stored

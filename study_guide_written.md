@@ -1,5 +1,6 @@
 # Study Guide: JS109 #
 
+**NOTE: ALWAYS MENTION RETURN VALUES AND SIDE EFFECTS IF ANY ARE PRESENT**
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**
 - A named area of a program's memory where data can be stored

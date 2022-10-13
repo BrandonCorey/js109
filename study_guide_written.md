@@ -103,7 +103,7 @@ console.log(a);
 - Global Variables are accessible throughout the entire program (below where they are declared)
 
 **Local Scope**
-- The scope of a function or block
+- The scope within a code block or function body
 - Variables declared here are called *Local Variables*
 - Local variables are not accessible to the outer scope
 ```javascript

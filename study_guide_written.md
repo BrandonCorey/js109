@@ -3,7 +3,7 @@
 **General Guidance**
 - What are the **side effects** of the code?
 - What are the **return values** or outputs of the code?
-- Mention what **concept** the code demonstrates
+- What **concept** does the code demonstrate?
 
 **Variable vocab check**
 - Declaration

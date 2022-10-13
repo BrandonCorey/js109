@@ -20,6 +20,12 @@
 - Function body (instead of code block)
 - Function scope (instead of block scope)
 - Variables are not passed to or returned by functions: values or references are passed.
+- Invokation or call
+
+**Key Word vocab check**
+- Conditional statements are **defined**
+- Loops are **defined**
+- Statements in general, which are denoted by key words, are **DEFINED**
 
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**

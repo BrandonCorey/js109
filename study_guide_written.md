@@ -1,8 +1,9 @@
 # Study Guide: JS109 #
 
-**NOTE: ALWAYS MENTION RETURN VALUES AND SIDE EFFECTS IF ANY ARE PRESENT**
+**General Guidance**
+- What are the side effects of the code
+- What are the return values or outputs of the code
 - Mention what concept the code demonstrates
-- Variables are not passed to or returned by functions: values or references are passed.
 
 **Variable vocab check**
 - Declaration
@@ -18,6 +19,7 @@
 - Parameters(local variables defined in function definition)
 - Function body (instead of code block)
 - Function scope (instead of block scope)
+- Variables are not passed to or returned by functions: values or references are passed.
 
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**

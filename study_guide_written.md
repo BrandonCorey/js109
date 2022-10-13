@@ -3,12 +3,14 @@
 **NOTE: ALWAYS MENTION RETURN VALUES AND SIDE EFFECTS IF ANY ARE PRESENT**
 - Mention what concept the code demonstrates
 - Variables are not passed to or returned by functions: values or references are passed.
+
 **Variable vocab check**
 - Declaration
 - Initalization
 - Initializer (value that variable is initalized with)
 - Assignment
 - Reassiment
+
 **Function vocab check**
 - Definition (using either declaration or expression or arrow expression)
 - Declaration

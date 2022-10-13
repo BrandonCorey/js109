@@ -3,6 +3,20 @@
 **NOTE: ALWAYS MENTION RETURN VALUES AND SIDE EFFECTS IF ANY ARE PRESENT**
 - Mention what concept the code demonstrates
 - Variables are not passed to or returned by functions: values or references are passed.
+**Variable vocab check**
+- Declaration
+- Initalization
+- Initializer (value that variable is initalized with)
+- Assignment
+- Reassiment
+**Function vocab check**
+- Definition (using either declaration or expression or arrow expression)
+- Declaration
+- Argument (values/references passed to function wyhen called)
+- Parameters(local variables defined in function definition)
+- Function body (instead of code block)
+- Function scope (instead of block scope)
+
 ## Declarations, initialization, assingment, and re-assignment ##
 **What is a variable?**
 - A named area of a program's memory where data can be stored

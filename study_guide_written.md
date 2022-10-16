@@ -1,6 +1,6 @@
 # Study Guide: JS109 #
 
-**General Guidance**
+## General Guidance ##
 - What are the **side effects** of the code?
 - What are the **return values** or outputs of the code?
 - What **concept** does the code demonstrate?

@@ -902,6 +902,20 @@ let arr = [1, 2, 3];
 arr.map(num => num * num); // map is the higher order function here, (num => num * num) is the call back function (annonymous arrow function expression)
 ```
 
+**Launch School example**
+```javascript
+array.forEach(element => {
+  console.log(element.foo);
+});
+```
+This paragraph talks about the `forEach` method being
+called by the object referenced by `array` in the above
+code. It invokes the callback function for each element,
+passing that element to the callback as an argument.
+Within the callback, the element is known by the
+parameter name `element`, and the callback uses the
+`console.log` method log the value of `element.foo`.
+
 **Note: Helpful launch school notes on breaking down higher order and callback functions**
 - What type of action is being performed? Method call? Callback? Conditional? Something else?
 - On what value is that action performed?

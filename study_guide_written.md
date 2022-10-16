@@ -1,8 +1,9 @@
 # Study Guide: JS109 #
 
 ## General Guidance ##
-- What are the **side effects** of the code?
-- What are the **return values** or outputs of the code?
+- What does the code output
+  - **Side Effects?**
+  - **Return value? (Always a return value for functions/methods)**
 - What **concept** does the code demonstrate?
 
 **Variable vocab check**

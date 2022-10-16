@@ -14,8 +14,10 @@
 - Reassiment
 
 
-- When talking about methods called on primitives stored in variables, say "The method (method name) is called by the primitive (insert value) stored in (insert variable name)
-- When talking about methods called on objects stored in variables, say "The method (method name) is called on the object referenced by (insert variable name)
+- When talking about methods called on primitives stored in variables, say:
+  - "The method (method name) is called by the primitive (insert value) stored in (insert variable name)
+- When talking about methods called on objects stored in variables, say:
+  - "The method (method name) is called on the object referenced by (insert variable name)
 
 **Function vocab check**
 - Definition (using either declaration or expression or arrow expression)
